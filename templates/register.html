@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>PATHFINDER - Register</title>
+    <style>
+  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please enter a username and a password</h1>
+      <br>
+      <form method=post>
+  <p>
+    <label for="username">Username:</label>
+    <input id="username" type="text" name = "user">
+  </p>
+  <p>
+    <label for="password">Password:</label>
+    <input id="password" type="text" name="pass">
+  </p>
+        <select name="path">
+
+    <option value="blaze">Blaze</option>
+    <option value="saab">Gale</option>
+    <option value="mercedes">Chill</option>
+    <option value="audi">Aqua</option>
+
+</select>
+        <input type="submit" value="Register" name="Register"/>
+
+</form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
